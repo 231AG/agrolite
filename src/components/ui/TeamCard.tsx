@@ -1,48 +1,33 @@
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { MapPin } from "lucide-react";
 import type { TeamMember } from "@/types";
 
 interface TeamCardProps {
   member: TeamMember;
-  featured?: boolean;
 }
 
-export function TeamCard({ member, featured = false }: TeamCardProps) {
+export function TeamCard({ member }: TeamCardProps) {
   return (
-    <article
-      className={`bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 ${
-        featured ? "md:col-span-2 lg:col-span-1" : ""
-      }`}
-    >
+    <article className="bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300">
       <div className="relative aspect-square overflow-hidden">
         <Image
           src={member.image}
           alt={member.name}
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 400px"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
       </div>
-      <div className="p-6">
-        <h3 className="font-display text-xl font-bold text-secondary heading-display">
+      <div className="p-5 text-center">
+        <h3 className="font-display text-lg font-bold text-secondary heading-display">
           {member.name}
         </h3>
-        <p className="text-primary font-semibold text-sm mt-1 mb-3">
-          {member.role}
-        </p>
-        <p className="text-muted text-sm leading-relaxed mb-4">{member.bio}</p>
-        {member.highlights && (
-          <ul className="space-y-2">
-            {member.highlights.map((item) => (
-              <li
-                key={item}
-                className="flex items-start gap-2 text-sm text-foreground"
-              >
-                <CheckCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                {item}
-              </li>
-            ))}
-          </ul>
+        <p className="text-primary font-semibold text-sm mt-1">{member.role}</p>
+        {member.county && (
+          <p className="flex items-center justify-center gap-1.5 text-muted text-xs mt-2">
+            <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
+            {member.county}
+          </p>
         )}
       </div>
     </article>

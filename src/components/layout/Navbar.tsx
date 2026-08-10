@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "@/lib/constants";
 
 export function Navbar() {
@@ -31,18 +32,15 @@ export function Navbar() {
     >
       <nav className="container-wide mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center group-hover:bg-primary-light transition-colors">
-              <Leaf className="w-5 h-5 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-display text-lg font-bold text-primary heading-display">
-                AgroLite
-              </span>
-              <span className="block text-xs text-muted -mt-0.5">
-                {COMPANY.tagline}
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/agro-lite-logo-transparent.png"
+              alt={COMPANY.name}
+              width={612}
+              height={408}
+              priority
+              className="h-9 sm:h-11 md:h-14 w-auto"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

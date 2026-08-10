@@ -21,7 +21,7 @@ export function OrganizationJsonLd() {
         "@type": "Organization",
         name: COMPANY.name,
         url: COMPANY.url,
-        logo: `${COMPANY.url}/logo.png`,
+        logo: `${COMPANY.url}/agro-lite-logo-transparent.png`,
         description:
           "AgroLite Company provides high-quality agricultural products, hybrid seedlings, and sustainable farming solutions in Liberia.",
         foundingDate: "2017",

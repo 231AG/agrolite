@@ -34,7 +34,5 @@ export const IMAGES = {
   impact: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
   about: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1920&q=80",
   team: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
-  teamMale: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
-  teamFemale: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
   contact: "https://images.unsplash.com/photo-1423666639045-f5600c3400f3?w=1920&q=80",
 } as const;

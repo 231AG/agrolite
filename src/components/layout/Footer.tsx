@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Leaf, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { COMPANY, NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
@@ -10,14 +11,13 @@ export function Footer() {
       <div className="container-wide mx-auto section-padding pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-primary-dark" />
-              </div>
-              <span className="font-display text-xl font-bold heading-display">
-                AgroLite
-              </span>
-            </div>
+            <Image
+              src="/agro-lite-logo-transparent.png"
+              alt={COMPANY.name}
+              width={612}
+              height={408}
+              className="h-14 w-auto mb-4"
+            />
             <p className="text-white/80 text-sm leading-relaxed mb-4">
               Empowering Liberian farmers with quality agricultural products,
               hybrid seedlings, and sustainable farming solutions since 2017.

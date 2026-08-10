@@ -46,6 +46,5 @@ export interface TeamMember {
   name: string;
   role: string;
   image: string;
-  bio: string;
-  highlights?: string[];
+  county?: string;
 }

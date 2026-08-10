@@ -10,8 +10,6 @@ import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
 export const metadata = createMetadata(PAGE_METADATA.team);
 
 export default function TeamPage() {
-  const [ceo, ...rest] = teamMembers;
-
   return (
     <>
       <PageHero
@@ -34,12 +32,9 @@ export default function TeamPage() {
             />
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FadeIn delay={0.1}>
-              <TeamCard member={ceo} />
-            </FadeIn>
-            {rest.map((member, index) => (
-              <FadeIn key={member.name} delay={(index + 1) * 0.1}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {teamMembers.map((member, index) => (
+              <FadeIn key={member.name} delay={index * 0.08}>
                 <TeamCard member={member} />
               </FadeIn>
             ))}
