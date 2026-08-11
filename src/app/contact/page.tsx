@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { COMPANY } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = createMetadata(PAGE_METADATA.contact);
 
@@ -19,6 +20,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: COMPANY.url },
+          { name: "Contact", url: `${COMPANY.url}/contact` },
+        ]}
+      />
       <PageHero
         title="Contact Us"
         description="Get in touch with AgroLite for products, services, partnerships, or general inquiries."

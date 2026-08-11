@@ -6,12 +6,19 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
 import { CORE_VALUES, TIMELINE, COMPANY } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = createMetadata(PAGE_METADATA.about);
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: COMPANY.url },
+          { name: "About", url: `${COMPANY.url}/about` },
+        ]}
+      />
       <PageHero
         title="About AgroLite"
         description="Building Liberia's agricultural future since 2017."

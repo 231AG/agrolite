@@ -13,7 +13,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Image
               src="/agro-lite-logo-transparent.png"
-              alt={COMPANY.name}
+              alt={`${COMPANY.name} logo`}
               width={612}
               height={408}
               className="h-14 w-auto mb-4"

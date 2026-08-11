@@ -9,12 +9,20 @@ import { IMAGES } from "@/lib/images";
 import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
 import { CheckCircle } from "lucide-react";
 import { InquiryActions } from "@/components/ui/InquiryActions";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { COMPANY } from "@/lib/constants";
 
 export const metadata = createMetadata(PAGE_METADATA.services);
 
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: COMPANY.url },
+          { name: "Services", url: `${COMPANY.url}/services` },
+        ]}
+      />
       <PageHero
         title="Our Services"
         description="Comprehensive agricultural services to support every stage of your farming journey."

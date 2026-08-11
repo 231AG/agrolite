@@ -35,7 +35,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center">
             <Image
               src="/agro-lite-logo-transparent.png"
-              alt={COMPANY.name}
+              alt={`${COMPANY.name} logo`}
               width={612}
               height={408}
               priority

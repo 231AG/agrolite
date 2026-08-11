@@ -12,7 +12,7 @@ export function TeamCard({ member }: TeamCardProps) {
       <div className="relative aspect-square overflow-hidden">
         <Image
           src={member.image}
-          alt={member.name}
+          alt={`${member.name}, ${member.role} at AgroLite Company Inc.`}
           fill
           className="object-cover"
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"

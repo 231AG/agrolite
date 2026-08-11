@@ -12,7 +12,7 @@ export const COMPANY = {
     full: "Voga Mission, Right Opposite the Cemetery, After Paynesville City Hall, Paynesville, Liberia",
   },
   whatsapp: "0777185705",
-  url: "https://agrolite.com",
+  url: "https://agrolite.org",
 } as const;
 
 export const NAV_LINKS = [
@@ -26,10 +26,10 @@ export const NAV_LINKS = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Twitter", href: "#" },
+  { label: "Facebook", href: "https://www.facebook.com/agrolite" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/agrolite" },
+  { label: "Instagram", href: "https://www.instagram.com/agrolite" },
+  { label: "Twitter", href: "https://twitter.com/agrolite" },
 ] as const;
 
 export const IMPACT_STATS = [

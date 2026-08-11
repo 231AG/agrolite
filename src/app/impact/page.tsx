@@ -6,9 +6,10 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { CTA } from "@/components/ui/CTA";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/FadeIn";
-import { IMPACT_STATS } from "@/lib/constants";
+import { IMPACT_STATS, COMPANY } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
 import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = createMetadata(PAGE_METADATA.impact);
 
@@ -53,6 +54,12 @@ const impactSections = [
 export default function ImpactPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: COMPANY.url },
+          { name: "Impact", url: `${COMPANY.url}/impact` },
+        ]}
+      />
       <PageHero
         title="Our Impact"
         description="Transforming lives and communities through sustainable agricultural development."
@@ -150,27 +157,27 @@ export default function ImpactPage() {
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              "/assessments/motion_photo_6537110994658851369.jpg",
-              IMAGES.community,
-              "/assessments/IMG_20260602_150025_541.jpg",
-            ].map((img, index) => (
-              <StaggerItem key={index}>
+              {
+                src: "/assessments/motion_photo_6537110994658851369.jpg",
+                caption: "Empowering Farmers",
+              },
+              { src: IMAGES.community, caption: "Building Communities" },
+              {
+                src: "/assessments/IMG_20260602_150025_541.jpg",
+                caption: "Growing Together",
+              },
+            ].map((photo) => (
+              <StaggerItem key={photo.src}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
                   <Image
-                    src={img}
-                    alt={`AgroLite impact story ${index + 1}`}
+                    src={photo.src}
+                    alt={`AgroLite impact story: ${photo.caption} — farmers and community members in Liberia`}
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 to-transparent flex items-end p-6">
-                    <p className="text-white font-semibold">
-                      {index === 0
-                        ? "Empowering Farmers"
-                        : index === 1
-                          ? "Building Communities"
-                          : "Growing Together"}
-                    </p>
+                    <p className="text-white font-semibold">{photo.caption}</p>
                   </div>
                 </div>
               </StaggerItem>

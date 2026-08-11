@@ -1,4 +1,4 @@
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, SOCIAL_LINKS } from "@/lib/constants";
 
 interface JsonLdProps {
   data: Record<string, unknown>;
@@ -18,17 +18,20 @@ export function OrganizationJsonLd() {
     <JsonLd
       data={{
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness"],
+        "@id": `${COMPANY.url}/#organization`,
         name: COMPANY.name,
         url: COMPANY.url,
         logo: `${COMPANY.url}/agro-lite-logo-transparent.png`,
+        image: `${COMPANY.url}/agro-lite-logo-transparent.png`,
         description:
           "AgroLite Company provides high-quality agricultural products, hybrid seedlings, and sustainable farming solutions in Liberia.",
         foundingDate: "2017",
         address: {
           "@type": "PostalAddress",
-          streetAddress: COMPANY.address.line1,
+          streetAddress: `${COMPANY.address.line1}, ${COMPANY.address.line2}`,
           addressLocality: "Paynesville",
+          addressRegion: "Montserrado",
           addressCountry: "LR",
         },
         contactPoint: {
@@ -36,8 +39,45 @@ export function OrganizationJsonLd() {
           telephone: COMPANY.phones[0],
           email: COMPANY.email,
           contactType: "customer service",
+          areaServed: "LR",
         },
-        sameAs: [],
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+            ],
+            opens: "08:00",
+            closes: "17:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: "Saturday",
+            opens: "08:00",
+            closes: "13:00",
+          },
+        ],
+        sameAs: SOCIAL_LINKS.map((social) => social.href),
+      }}
+    />
+  );
+}
+
+export function WebsiteJsonLd() {
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": `${COMPANY.url}/#website`,
+        name: COMPANY.name,
+        url: COMPANY.url,
+        publisher: { "@id": `${COMPANY.url}/#organization` },
+        inLanguage: "en-US",
       }}
     />
   );
@@ -46,17 +86,33 @@ export function OrganizationJsonLd() {
 import type { Availability } from "@/types";
 import { isProductAvailable } from "@/lib/product-utils";
 
+function parsePrice(price?: string): number | undefined {
+  if (!price) return undefined;
+  const match = price.match(/[\d,]+(\.\d+)?/);
+  if (!match) return undefined;
+  const value = Number(match[0].replace(/,/g, ""));
+  return Number.isFinite(value) ? value : undefined;
+}
+
 export function ProductJsonLd({
+  slug,
   name,
   description,
   image,
+  category,
+  price,
   availability,
 }: {
+  slug: string;
   name: string;
   description: string;
   image: string;
+  category: string;
+  price?: string;
   availability: Availability;
 }) {
+  const numericPrice = parsePrice(price);
+
   return (
     <JsonLd
       data={{
@@ -65,13 +121,21 @@ export function ProductJsonLd({
         name,
         description,
         image,
+        sku: slug,
+        category,
+        url: `${COMPANY.url}/products/${slug}`,
         brand: { "@type": "Brand", name: COMPANY.name },
         offers: {
           "@type": "Offer",
+          url: `${COMPANY.url}/products/${slug}`,
           availability: isProductAvailable(availability)
             ? "https://schema.org/InStock"
             : "https://schema.org/PreOrder",
           seller: { "@type": "Organization", name: COMPANY.name },
+          ...(numericPrice !== undefined && {
+            price: numericPrice,
+            priceCurrency: "LRD",
+          }),
         },
       }}
     />

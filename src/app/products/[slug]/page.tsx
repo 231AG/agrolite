@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle, ArrowLeft } from "lucide-react";
@@ -13,9 +14,12 @@ import {
 } from "@/components/seo/JsonLd";
 import { getProductBySlug, getRelatedProducts, products } from "@/lib/products";
 import { availabilityStyles } from "@/lib/product-utils";
-import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
+import {
+  createMetadata,
+  buildProductTitle,
+  buildProductDescription,
+} from "@/lib/metadata";
 import { COMPANY } from "@/lib/constants";
-import type { Metadata } from "next";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -30,11 +34,14 @@ export async function generateMetadata({
 }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  if (!product) return createMetadata(PAGE_METADATA.products);
+  if (!product) notFound();
 
   return createMetadata({
-    title: product.name,
-    description: product.shortDescription,
+    title: buildProductTitle(product.name, product.category),
+    description: buildProductDescription(
+      product.shortDescription,
+      product.category
+    ),
     path: `/products/${product.slug}`,
     image: product.image,
   });
@@ -51,9 +58,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   return (
     <>
       <ProductJsonLd
+        slug={product.slug}
         name={product.name}
         description={product.description}
         image={product.image}
+        category={product.category}
+        price={product.price}
         availability={product.availability}
       />
       <BreadcrumbJsonLd

@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | AgroLite Company Inc.",
+  description:
+    "The page you're looking for doesn't exist. Return to AgroLite's homepage to browse our agricultural products and services.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

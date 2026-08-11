@@ -6,12 +6,20 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { teamMembers } from "@/lib/team";
 import { IMAGES } from "@/lib/images";
 import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
+import { COMPANY } from "@/lib/constants";
 
 export const metadata = createMetadata(PAGE_METADATA.team);
 
 export default function TeamPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: COMPANY.url },
+          { name: "Team", url: `${COMPANY.url}/team` },
+        ]}
+      />
       <PageHero
         title="Leadership Team"
         description="Meet the people driving AgroLite's mission to transform Liberian agriculture."

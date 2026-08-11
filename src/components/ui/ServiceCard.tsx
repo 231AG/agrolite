@@ -32,6 +32,7 @@ export function ServiceCard({ service, showLink = true }: ServiceCardProps) {
           <Link
             href="/services"
             className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:gap-3 transition-all"
+            aria-label={`Learn more about ${service.title}`}
           >
             Learn More
             <ArrowRight className="w-4 h-4" />

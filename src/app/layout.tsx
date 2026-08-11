@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import { OrganizationJsonLd } from "@/components/seo/JsonLd";
+import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/JsonLd";
 import { createMetadata, PAGE_METADATA } from "@/lib/metadata";
 import "./globals.css";
 
@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
       <head>
         <OrganizationJsonLd />
+        <WebsiteJsonLd />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <Navbar />
