@@ -149,14 +149,18 @@ export default function ImpactPage() {
             />
           </FadeIn>
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[IMAGES.farmers, IMAGES.community, IMAGES.field].map((img, index) => (
+            {[
+              "/assessments/motion_photo_6537110994658851369.jpg",
+              IMAGES.community,
+              "/assessments/IMG_20260602_150025_541.jpg",
+            ].map((img, index) => (
               <StaggerItem key={index}>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group">
                   <Image
                     src={img}
                     alt={`AgroLite impact story ${index + 1}`}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 to-transparent flex items-end p-6">

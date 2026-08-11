@@ -21,7 +21,7 @@ export function PageHero({
         src={image}
         alt=""
         fill
-        className="object-cover"
+        className="object-cover object-top"
         priority
         sizes="100vw"
       />
@@ -72,7 +72,7 @@ export function HomeHero({ image }: HomeHeroProps) {
         src={image}
         alt="Liberian farmers in agricultural fields"
         fill
-        className="object-cover"
+        className="object-cover object-top"
         priority
         sizes="100vw"
       />

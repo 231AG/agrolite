@@ -8,7 +8,7 @@ export const services: Service[] = [
     description: "Professional farm assessments and field evaluations.",
     longDescription:
       "AgroLite Field Assessment Services provide professional farm assessments and field evaluations conducted by experienced AgroLite technicians. Our team visits your site to evaluate conditions, identify opportunities, and deliver practical recommendations that support better agricultural planning and productivity.",
-    image: IMAGES.field,
+    image: "/assessments/IMG_20260602_150025_541.jpg",
     features: [
       "Site assessments",
       "Farm evaluations",
@@ -41,7 +41,7 @@ export const services: Service[] = [
     description: "Professional soil analysis and fertility recommendations.",
     longDescription:
       "AgroLite Soil Testing Services provide professional soil analysis to help farmers understand their land and make informed input decisions. Our technicians evaluate soil conditions and provide actionable fertility recommendations tailored to your crops.",
-    image: IMAGES.soil,
+    image: "/assessments/IMG_20260602_141749_199.jpg",
     features: [
       "Soil pH evaluation",
       "Nutrient level analysis",

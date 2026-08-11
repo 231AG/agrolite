@@ -30,10 +30,10 @@ export default function HomePage() {
             <FadeIn>
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src={IMAGES.farmers}
+                  src="/assessments/IMG_20250913_140553_639.jpg"
                   alt="AgroLite supporting Liberian farmers"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
