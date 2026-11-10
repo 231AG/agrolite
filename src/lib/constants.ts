@@ -3,7 +3,7 @@ export const COMPANY = {
   tagline: "Growing Beyond Greatness",
   footerTagline: "Growing Beyond Greatness Together",
   founded: 2017,
-  email: "info@agrolite.org",
+  email: "info@agrolite.net",
   phones: ["0777185705", "0880761468", "0770660738", "0777462536"],
   address: {
     line1: "Voga Mission, Right Opposite the Cemetery",

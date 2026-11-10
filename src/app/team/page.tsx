@@ -62,7 +62,7 @@ export default function TeamPage() {
               Reach out to learn about career opportunities.
             </p>
             <a
-              href="mailto:agrolite.liberia@gmail.com?subject=Career Inquiry"
+              href={`mailto:${COMPANY.email}?subject=Career%20Inquiry`}
               className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors"
             >
               Contact Us About Careers
