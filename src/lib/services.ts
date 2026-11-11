@@ -1,5 +1,6 @@
 import { IMAGES } from "./images";
 import type { Service } from "@/types";
+import { SOIL_TESTING_PATH } from "./soil-testing";
 
 export const services: Service[] = [
   {
@@ -40,19 +41,20 @@ export const services: Service[] = [
     title: "Soil Testing Services",
     description: "Professional soil analysis and fertility recommendations.",
     longDescription:
-      "AgroLite Soil Testing Services provide professional soil analysis to help farmers understand their land and make informed input decisions. Our technicians evaluate soil conditions and provide actionable fertility recommendations tailored to your crops.",
+      "AgroLite Soil Testing Services provide professional soil analysis to help farmers understand their land and make informed input decisions. Samples are analyzed in our own soil laboratory, and our team provides actionable fertility recommendations tailored to your crops.",
     image: "/assessments/IMG_20260602_141749_199.jpg",
     features: [
-      "Soil pH evaluation",
-      "Nutrient level analysis",
-      "Soil suitability assessment",
-      "Fertility recommendations",
+      "Physical and chemical soil analysis",
+      "Macro- and micronutrient testing",
+      "Biological health and contamination testing",
+      "Fertilizer and pH correction recommendations",
     ],
     benefits: [
       "Improved crop performance",
       "Better fertilizer management",
       "Reduced production risks",
     ],
+    detailHref: SOIL_TESTING_PATH,
   },
   {
     slug: "pest-disease-control",
