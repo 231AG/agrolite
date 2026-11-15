@@ -25,7 +25,7 @@ import {
 export const metadata = createMetadata(PAGE_METADATA.soilTesting);
 
 const HERO_IMAGE = "/assessments/IMG_20260602_141749_199.jpg";
-const SIDE_IMAGE = "/assessments/IMG_20260602_150025_541.jpg";
+const SIDE_IMAGE = "/services/soil-testing-lab.jpg";
 const QUOTE_HREF = `/contact?subject=${encodeURIComponent("Soil Testing Request")}`;
 
 export default function SoilTestingPage() {
@@ -104,7 +104,7 @@ export default function SoilTestingPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
               <Image
                 src={SIDE_IMAGE}
-                alt="AgroLite technician assessing soil conditions in the field"
+                alt="Soil samples and laboratory equipment in AgroLite's soil testing lab"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"

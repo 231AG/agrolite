@@ -10,6 +10,8 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   "Root & Tuber Crops",
   "Nursery Supplies",
   "Farm Inputs",
+  "Fruit Tree Seedlings",
+  "Farm Tools & Equipment",
 ];
 
 export const products: Product[] = [
@@ -46,13 +48,13 @@ export const products: Product[] = [
     slug: "sprouted-oil-palm-seeds",
     name: "Sprouted Oil Palm Seeds",
     shortDescription:
-      "Pre-germinated Hybrid Tenera oil palm seeds ready for nursery establishment and seedling production.",
+      "Improved exotic Hybrid Tenera oil palm seeds, pre-germinated and ready for nursery establishment and seedling production.",
     description:
       "Pre-germinated Hybrid Tenera oil palm seeds from AgroLite provide a reliable starting point for nursery operators and farmers establishing their own seedling production. Each batch is prepared to support high germination success and vigorous early growth in controlled nursery environments.",
     category: "Oil Palm Products",
     availability: "Available",
-    image: IMAGES.oilPalmSeeds,
-    gallery: [IMAGES.oilPalmSeeds, IMAGES.oilPalmNursery, IMAGES.seedlings],
+    image: IMAGES.realOilPalmSeeds,
+    gallery: [IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery, IMAGES.seedlings],
     benefits: [
       "High germination rate",
       "Nursery-ready",
@@ -76,8 +78,8 @@ export const products: Product[] = [
     category: "Oil Palm Products",
     availability: "Available",
     packageSize: "500 Seeds per Pack",
-    image: IMAGES.oilPalmSeeds,
-    gallery: [IMAGES.oilPalmSeeds, IMAGES.nursery, IMAGES.oilPalm],
+    image: IMAGES.realOilPalmSeeds,
+    gallery: [IMAGES.realOilPalmSeeds, IMAGES.nursery, IMAGES.oilPalm],
     benefits: [
       "Economical for large nursery operations",
       "Consistent Hybrid Tenera genetics",
@@ -127,8 +129,9 @@ export const products: Product[] = [
       "The Hybrid Cocoa Pod F1 (Forastero TC Series-8) is an improved cocoa variety developed for uniform growth, stronger field performance, and increased productivity. It is suited to farmers and propagators seeking consistent quality and reliable production outcomes.",
     category: "Cocoa Products",
     availability: "Available",
-    image: IMAGES.cocoaPod,
-    gallery: [IMAGES.cocoaPod, IMAGES.cocoaFarm, IMAGES.cocoa],
+    price: "USD 5 per pod",
+    image: IMAGES.realCocoaPods,
+    gallery: [IMAGES.realCocoaPods, IMAGES.cocoaPod, IMAGES.cocoaFarm],
     benefits: [
       "High yielding",
       "Uniform growth",
@@ -137,6 +140,8 @@ export const products: Product[] = [
     ],
     features: [
       "Forastero TC Series-8 variety",
+      "Early bearing — begins producing in about 18 months",
+      "Sourced from the Cocoa Research Institute of Nigeria (CRIN)",
       "Suitable for propagation and production",
       "Commercial cocoa farming applications",
       "Contact AgroLite for supply details",
@@ -151,8 +156,8 @@ export const products: Product[] = [
       "AgroLite supplies quality hybrid Forastero cocoa pods for commercial cocoa production and propagation programs. These pods are sourced to support farmers and nursery operators building productive and sustainable cocoa enterprises.",
     category: "Cocoa Products",
     availability: "Available",
-    image: IMAGES.cocoa,
-    gallery: [IMAGES.cocoa, IMAGES.cocoaPod, IMAGES.cocoaFarm],
+    image: IMAGES.realCocoaPods,
+    gallery: [IMAGES.realCocoaPods, IMAGES.cocoa, IMAGES.cocoaPod],
     benefits: [
       "Reliable Forastero hybrid quality",
       "Suitable for commercial production",
@@ -423,8 +428,8 @@ export const products: Product[] = [
       "AgroLite poly bags are durable nursery supplies designed for seedling propagation and professional nursery establishment. Available in multiple sizes and pack options to support cocoa, oil palm, fruit tree, and vegetable seedling production.",
     category: "Nursery Supplies",
     availability: "Available",
-    image: IMAGES.polyBags,
-    gallery: [IMAGES.polyBags, IMAGES.nursery, IMAGES.seedlings],
+    image: IMAGES.realPolyBags,
+    gallery: [IMAGES.realPolyBags, IMAGES.nursery, IMAGES.seedlings],
     benefits: [
       "Cocoa propagation",
       "Oil palm nurseries",
@@ -489,26 +494,103 @@ export const products: Product[] = [
   },
   {
     slug: "fertilizer",
-    name: "Fertilizer",
+    name: "Fertilizers (Urea, NPK & More)",
     shortDescription:
-      "Quality agricultural fertilizer suitable for improving soil fertility and increasing crop productivity.",
+      "Urea, NPK, and other quality fertilizers to restore soil fertility and boost crop yields.",
     description:
-      "AgroLite supplies quality agricultural fertilizer to improve soil fertility and increase crop productivity across multiple crop types. Contact our team for recommendations matched to your soil test results and crop requirements.",
+      "AgroLite supplies different types of agricultural fertilizer, including Urea (46% nitrogen) and NPK blends, to restore soil fertility and increase crop productivity. Not sure which one your farm needs? Pair your purchase with an AgroLite soil test and our team will recommend the right fertilizer and application rate for your crop.",
     category: "Farm Inputs",
     availability: "Available",
-    image: IMAGES.fertilizer,
-    gallery: [IMAGES.fertilizer, IMAGES.soil, IMAGES.field],
+    image: IMAGES.realFertilizers,
+    gallery: [IMAGES.realFertilizers, IMAGES.fertilizer, IMAGES.field],
     benefits: [
       "Enhanced crop growth",
       "Improved yields",
       "Suitable for multiple crop types",
     ],
     features: [
+      "Urea (46% N) and NPK blends available",
       "Agricultural-grade fertilizer",
       "Multiple crop applications",
       "Soil fertility improvement",
       "Application guidance available",
     ],
+  },
+  // Fruit Tree Seedlings
+  {
+    slug: "orange-seedlings",
+    name: "Orange Seedlings",
+    shortDescription:
+      "Healthy, nursery-raised orange seedlings for home gardens, orchards, and commercial citrus farms.",
+    description:
+      "Start your citrus orchard with healthy orange seedlings raised in AgroLite nurseries. Each seedling is nursed for strong roots and vigorous growth, so it establishes quickly after transplanting. Ideal for backyard gardens, school and community orchards, and commercial citrus farms across Liberia.",
+    category: "Fruit Tree Seedlings",
+    availability: "Available",
+    price: "USD 5 per seedling",
+    image: IMAGES.seedlings,
+    gallery: [IMAGES.seedlings],
+    benefits: [
+      "Strong, healthy root systems",
+      "Fast establishment after transplanting",
+      "Long-term fruit income",
+      "Suitable for gardens and commercial orchards",
+    ],
+    features: [
+      "Nursery-raised orange seedlings",
+      "Planting and care guidance available",
+      "Bulk orders welcome",
+    ],
+  },
+
+  // Farm Tools & Equipment
+  {
+    slug: "4-stroke-petrol-brush-cutter",
+    name: "4-Stroke Petrol Brush Cutter",
+    shortDescription:
+      "Powerful 4-stroke petrol brush cutter for clearing grass, weeds, and bush on farms, gardens, and compounds.",
+    description:
+      "Clear land faster with less effort. This powerful 4-stroke petrol brush cutter is built for cutting grass, clearing weeds, trimming bush, and maintaining farmland, plantations, gardens, and landscapes. Its fuel-efficient engine runs on straight petrol with no oil mixing, and delivers steady, reliable power through long working days. It also accepts AgroLite's soil tilling attachment, turning one machine into a land-clearing and soil-preparation tool.",
+    category: "Farm Tools & Equipment",
+    availability: "Contact for Availability",
+    image: IMAGES.realBrushCutter,
+    gallery: [IMAGES.realBrushCutter],
+    benefits: [
+      "Clears land faster than manual cutlass work",
+      "Fuel-efficient 4-stroke engine",
+      "Reliable for long working hours",
+      "One machine for clearing and (with attachment) tilling",
+    ],
+    features: [
+      "4-stroke petrol engine (no fuel/oil mixing)",
+      "3-tooth brush blade and nylon trimmer head included",
+      "Blade guard, harness, and tool kit included",
+      "Compatible with the soil tilling attachment",
+    ],
+    badge: "New",
+  },
+  {
+    slug: "brush-cutter-soil-tilling-attachment",
+    name: "Brush Cutter Soil Tilling Attachment",
+    shortDescription:
+      "Turn your 4-stroke brush cutter into a mini tiller for breaking soil, weeding, and seedbed preparation.",
+    description:
+      "Turn your 4-stroke brush cutter into a mini tiller. This soil tilling attachment breaks up compacted soil, improves soil aeration, controls weeds, and prepares seedbeds for planting, at a fraction of the cost of a tractor or power tiller. Ideal for vegetable beds, nurseries, small farms, and backyard gardens.",
+    category: "Farm Tools & Equipment",
+    availability: "Contact for Availability",
+    image: IMAGES.realBrushCutter,
+    gallery: [IMAGES.realBrushCutter],
+    benefits: [
+      "Breaks up compacted soil",
+      "Improves soil aeration",
+      "Controls weeds between rows",
+      "Faster seedbed preparation",
+    ],
+    features: [
+      "Fits 4-stroke brush cutters",
+      "Ideal for vegetable beds and nurseries",
+      "Low-cost alternative to a power tiller",
+    ],
+    badge: "New",
   },
 ];
 

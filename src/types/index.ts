@@ -6,7 +6,9 @@ export type ProductCategory =
   | "Seed Products"
   | "Root & Tuber Crops"
   | "Nursery Supplies"
-  | "Farm Inputs";
+  | "Farm Inputs"
+  | "Fruit Tree Seedlings"
+  | "Farm Tools & Equipment";
 
 export type Availability =
   | "Available"

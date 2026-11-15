@@ -113,7 +113,7 @@ export const PAGE_METADATA = {
   services: {
     title: "Farm Services & Agri Consulting",
     description:
-      "AgroLite offers field assessment, soil testing, farm layout and pegging, and pest and disease control services for farmers and cooperatives in Liberia.",
+      "AgroLite offers soil testing in our own lab, pest and disease control, farmer field training, field assessment, and farm layout services across Liberia.",
     path: "/services",
     image: "/assessments/1781034698884.jpg",
   },
