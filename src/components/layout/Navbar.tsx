@@ -70,7 +70,7 @@ export function Navbar() {
 
           <Link
             href="/contact"
-            className="hidden lg:inline-flex items-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-light transition-colors"
+            className="hidden lg:inline-flex items-center px-5 py-2.5 bg-brand-red text-white text-sm font-semibold rounded-md hover:bg-brand-red-dark transition-colors"
           >
             Get In Touch
           </Link>
@@ -110,7 +110,7 @@ export function Navbar() {
               })}
               <Link
                 href="/contact"
-                className="mt-2 mx-4 py-3 bg-primary text-white text-sm font-semibold rounded-lg text-center hover:bg-primary-light transition-colors"
+                className="mt-2 mx-4 py-3 bg-brand-red text-white text-sm font-semibold rounded-md text-center hover:bg-brand-red-dark transition-colors"
               >
                 Get In Touch
               </Link>

@@ -29,7 +29,7 @@ export const products: Product[] = [
     badge: "Best Seller",
     price: "LRD 375 per seedling",
     image: IMAGES.oilPalmNursery,
-    gallery: [IMAGES.oilPalmNursery, IMAGES.oilPalm, IMAGES.nursery],
+    gallery: [IMAGES.oilPalmNursery],
     benefits: [
       "Up to 30% higher oil production",
       "Early fruiting within 2–3 years",
@@ -54,7 +54,7 @@ export const products: Product[] = [
     category: "Oil Palm Products",
     availability: "Available",
     image: IMAGES.realOilPalmSeeds,
-    gallery: [IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery, IMAGES.seedlings],
+    gallery: [IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery],
     benefits: [
       "High germination rate",
       "Nursery-ready",
@@ -79,7 +79,7 @@ export const products: Product[] = [
     availability: "Available",
     packageSize: "500 Seeds per Pack",
     image: IMAGES.realOilPalmSeeds,
-    gallery: [IMAGES.realOilPalmSeeds, IMAGES.nursery, IMAGES.oilPalm],
+    gallery: [IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery],
     benefits: [
       "Economical for large nursery operations",
       "Consistent Hybrid Tenera genetics",
@@ -106,7 +106,7 @@ export const products: Product[] = [
     availability: "Available",
     price: "LRD 290 per seedling",
     image: IMAGES.cocoaFarm,
-    gallery: [IMAGES.cocoaFarm, IMAGES.cocoa, IMAGES.seedlings],
+    gallery: [IMAGES.cocoaFarm],
     benefits: [
       "High yield potential",
       "Improved disease resistance",
@@ -131,7 +131,7 @@ export const products: Product[] = [
     availability: "Available",
     price: "USD 5 per pod",
     image: IMAGES.realCocoaPods,
-    gallery: [IMAGES.realCocoaPods, IMAGES.cocoaPod, IMAGES.cocoaFarm],
+    gallery: [IMAGES.realCocoaPods],
     benefits: [
       "High yielding",
       "Uniform growth",
@@ -157,7 +157,7 @@ export const products: Product[] = [
     category: "Cocoa Products",
     availability: "Available",
     image: IMAGES.realCocoaPods,
-    gallery: [IMAGES.realCocoaPods, IMAGES.cocoa, IMAGES.cocoaPod],
+    gallery: [IMAGES.realCocoaPods],
     benefits: [
       "Reliable Forastero hybrid quality",
       "Suitable for commercial production",
@@ -183,7 +183,7 @@ export const products: Product[] = [
     category: "Plantain & Banana Products",
     availability: "Contact for Availability",
     image: IMAGES.plantainFarm,
-    gallery: [IMAGES.plantainFarm, IMAGES.plantain, IMAGES.field],
+    gallery: [IMAGES.plantainFarm, IMAGES.plantain],
     benefits: [
       "Productive hybrid planting material",
       "Suitable for commercial cultivation",
@@ -207,7 +207,7 @@ export const products: Product[] = [
     category: "Plantain & Banana Products",
     availability: "Available",
     image: IMAGES.plantain,
-    gallery: [IMAGES.plantain, IMAGES.plantainFarm, IMAGES.field],
+    gallery: [IMAGES.plantain, IMAGES.plantainFarm],
     benefits: [
       "Vigorous growth",
       "Large bunch production",
@@ -230,7 +230,7 @@ export const products: Product[] = [
     category: "Plantain & Banana Products",
     availability: "Contact for Availability",
     image: IMAGES.plantainFarm,
-    gallery: [IMAGES.plantainFarm, IMAGES.plantain, IMAGES.farmers],
+    gallery: [IMAGES.plantainFarm, IMAGES.plantain],
     benefits: [
       "Healthy propagation stock",
       "Suitable for diverse farm scales",
@@ -256,7 +256,7 @@ export const products: Product[] = [
     category: "Value-Added Agricultural Products",
     availability: "Seasonal Availability",
     image: IMAGES.plantainChips,
-    gallery: [IMAGES.plantainChips, IMAGES.plantain, IMAGES.plantainFarm],
+    gallery: [IMAGES.plantainChips],
     benefits: [
       "Locally processed product",
       "Multiple flavor options",
@@ -283,7 +283,7 @@ export const products: Product[] = [
     availability: "Contact for Availability",
     packageSize: "500 Seeds per Pack",
     image: IMAGES.guava,
-    gallery: [IMAGES.guava, IMAGES.seeds, IMAGES.seedlings],
+    gallery: [IMAGES.guava],
     benefits: [
       "Quality guava planting material",
       "Suitable for nursery establishment",
@@ -307,7 +307,7 @@ export const products: Product[] = [
     category: "Seed Products",
     availability: "Contact for Availability",
     image: IMAGES.maize,
-    gallery: [IMAGES.maize, IMAGES.field, IMAGES.seeds],
+    gallery: [IMAGES.maize],
     benefits: [
       "Food security crop",
       "Commercial cultivation suitability",
@@ -331,7 +331,7 @@ export const products: Product[] = [
     category: "Seed Products",
     availability: "Contact for Availability",
     image: IMAGES.groundnut,
-    gallery: [IMAGES.groundnut, IMAGES.field, IMAGES.seeds],
+    gallery: [IMAGES.groundnut],
     benefits: [
       "Deep red productive variety",
       "Adaptable to local conditions",
@@ -355,7 +355,7 @@ export const products: Product[] = [
     category: "Seed Products",
     availability: "Contact for Availability",
     image: IMAGES.sesame,
-    gallery: [IMAGES.sesame, IMAGES.field, IMAGES.seeds],
+    gallery: [IMAGES.sesame],
     benefits: [
       "Commercial crop potential",
       "Diversified farm income",
@@ -379,7 +379,7 @@ export const products: Product[] = [
     category: "Seed Products",
     availability: "Available",
     image: IMAGES.ginger,
-    gallery: [IMAGES.ginger, IMAGES.field, IMAGES.farmers],
+    gallery: [IMAGES.ginger],
     benefits: [
       "Strong germination",
       "High productivity",
@@ -404,7 +404,7 @@ export const products: Product[] = [
     category: "Root & Tuber Crops",
     availability: "Available",
     image: IMAGES.yam,
-    gallery: [IMAGES.yam, IMAGES.field, IMAGES.farmers],
+    gallery: [IMAGES.yam],
     benefits: [
       "Healthy propagation stock",
       "Strong growth performance",
@@ -429,7 +429,7 @@ export const products: Product[] = [
     category: "Nursery Supplies",
     availability: "Available",
     image: IMAGES.realPolyBags,
-    gallery: [IMAGES.realPolyBags, IMAGES.nursery, IMAGES.seedlings],
+    gallery: [IMAGES.realPolyBags],
     benefits: [
       "Cocoa propagation",
       "Oil palm nurseries",
@@ -454,7 +454,7 @@ export const products: Product[] = [
     category: "Nursery Supplies",
     availability: "Available",
     image: IMAGES.nursery,
-    gallery: [IMAGES.nursery, IMAGES.polyBags, IMAGES.seedlings],
+    gallery: [IMAGES.nursery],
     benefits: [
       "Strong root support",
       "Excellent drainage",
@@ -479,7 +479,7 @@ export const products: Product[] = [
     category: "Farm Inputs",
     availability: "Available",
     image: IMAGES.yam,
-    gallery: [IMAGES.yam, IMAGES.inputs, IMAGES.field],
+    gallery: [IMAGES.yam],
     benefits: [
       "Space-efficient farming",
       "Suitable for small-scale and urban production",
@@ -502,7 +502,7 @@ export const products: Product[] = [
     category: "Farm Inputs",
     availability: "Available",
     image: IMAGES.realFertilizers,
-    gallery: [IMAGES.realFertilizers, IMAGES.fertilizer, IMAGES.field],
+    gallery: [IMAGES.realFertilizers],
     benefits: [
       "Enhanced crop growth",
       "Improved yields",
@@ -527,8 +527,8 @@ export const products: Product[] = [
     category: "Fruit Tree Seedlings",
     availability: "Available",
     price: "USD 5 per seedling",
-    image: IMAGES.seedlings,
-    gallery: [IMAGES.seedlings],
+    image: IMAGES.realOrangeSeedlings,
+    gallery: [IMAGES.realOrangeSeedlings],
     benefits: [
       "Strong, healthy root systems",
       "Fast establishment after transplanting",
@@ -553,7 +553,7 @@ export const products: Product[] = [
     category: "Farm Tools & Equipment",
     availability: "Contact for Availability",
     image: IMAGES.realBrushCutter,
-    gallery: [IMAGES.realBrushCutter],
+    gallery: [IMAGES.realBrushCutter, IMAGES.realTillingAttachment],
     benefits: [
       "Clears land faster than manual cutlass work",
       "Fuel-efficient 4-stroke engine",
@@ -577,8 +577,8 @@ export const products: Product[] = [
       "Turn your 4-stroke brush cutter into a mini tiller. This soil tilling attachment breaks up compacted soil, improves soil aeration, controls weeds, and prepares seedbeds for planting, at a fraction of the cost of a tractor or power tiller. Ideal for vegetable beds, nurseries, small farms, and backyard gardens.",
     category: "Farm Tools & Equipment",
     availability: "Contact for Availability",
-    image: IMAGES.realBrushCutter,
-    gallery: [IMAGES.realBrushCutter],
+    image: IMAGES.realTillingAttachment,
+    gallery: [IMAGES.realTillingAttachment, IMAGES.realBrushCutter],
     benefits: [
       "Breaks up compacted soil",
       "Improves soil aeration",

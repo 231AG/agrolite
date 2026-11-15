@@ -29,7 +29,7 @@ export const services: Service[] = [
     description: "Identify, prevent, and control crop pests and diseases.",
     longDescription:
       "Pests and diseases can wipe out a season's work. AgroLite's plant protection specialists help you identify, prevent, and control crop pests and diseases before they cut into your harvest. We inspect your fields, diagnose the problem accurately, and apply proven Integrated Pest Management (IPM) strategies, combining good farm practices with safe, targeted pesticide use, so you lose less, spend less, and grow healthier crops.",
-    image: IMAGES.pest,
+    image: IMAGES.pestControl,
     features: [
       "Field inspection and scouting",
       "Pest and disease diagnosis",
