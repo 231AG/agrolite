@@ -112,6 +112,7 @@ export function ProductJsonLd({
   availability: Availability;
 }) {
   const numericPrice = parsePrice(price);
+  const priceCurrency = price && /usd|\$/i.test(price) ? "USD" : "LRD";
 
   return (
     <JsonLd
@@ -134,7 +135,7 @@ export function ProductJsonLd({
           seller: { "@type": "Organization", name: COMPANY.name },
           ...(numericPrice !== undefined && {
             price: numericPrice,
-            priceCurrency: "LRD",
+            priceCurrency,
           }),
         },
       }}
