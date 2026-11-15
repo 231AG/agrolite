@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { InquiryActions } from "@/components/ui/InquiryActions";
 import { CTA } from "@/components/ui/CTA";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { IMAGE_CREDITS } from "@/lib/images";
 import {
   ProductJsonLd,
   BreadcrumbJsonLd,
@@ -52,6 +53,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const product = getProductBySlug(slug);
 
   if (!product) notFound();
+
+  const credits = [...new Set([product.image, ...product.gallery])]
+    .map((src) => IMAGE_CREDITS[src])
+    .filter(Boolean);
 
   const related = getRelatedProducts(product);
 
@@ -151,6 +156,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     </div>
                   ))}
                 </div>
+                {credits.length > 0 && (
+                  <p className="text-xs text-muted">
+                    Photo credits: {credits.join("; ")}
+                  </p>
+                )}
               </div>
             </FadeIn>
 
