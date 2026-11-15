@@ -117,6 +117,13 @@ export const PAGE_METADATA = {
     path: "/services",
     image: "/assessments/1781034698884.jpg",
   },
+  soilTesting: {
+    title: "Soil Testing & Analysis Services in Liberia",
+    description:
+      "AgroLite tests soil physical, chemical, nutrient, biological, and contamination properties in our own lab, with fertilizer and pH recommendations for Liberian farms.",
+    path: "/services/soil-testing",
+    image: "/assessments/IMG_20260602_141749_199.jpg",
+  },
   impact: {
     title: "Farmer & Community Impact in Liberia",
     description:

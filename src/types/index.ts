@@ -40,6 +40,8 @@ export interface Service {
   features: string[];
   benefits?: string[];
   suitableFor?: string[];
+  /** Dedicated detail page, if the service has one. */
+  detailHref?: string;
 }
 
 export interface TeamMember {
