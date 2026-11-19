@@ -46,15 +46,15 @@ export const products: Product[] = [
   },
   {
     slug: "sprouted-oil-palm-seeds",
-    name: "Sprouted Oil Palm Seeds",
+    name: "Hybrid Tenera F-1 Sprouted Oil Palm Seeds",
     shortDescription:
-      "Improved exotic Hybrid Tenera oil palm seeds, pre-germinated and ready for nursery establishment and seedling production.",
+      "Improved Hybrid Tenera F-1 oil palm seeds, pre-germinated and packed by AgroLite, ready for nursery establishment.",
     description:
       "Pre-germinated Hybrid Tenera oil palm seeds from AgroLite provide a reliable starting point for nursery operators and farmers establishing their own seedling production. Each batch is prepared to support high germination success and vigorous early growth in controlled nursery environments.",
     category: "Oil Palm Products",
     availability: "Available",
-    image: IMAGES.realOilPalmSeeds,
-    gallery: [IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery],
+    image: IMAGES.realTeneraSeeds,
+    gallery: [IMAGES.realTeneraSeeds, IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery],
     benefits: [
       "High germination rate",
       "Nursery-ready",
@@ -62,24 +62,25 @@ export const products: Product[] = [
       "Improved planting success",
     ],
     features: [
-      "Hybrid Tenera variety",
+      "Hybrid Tenera F-1 variety",
       "Pre-germinated for faster nursery start",
+      "Sealed, labelled AgroLite packs",
       "Ideal for seedling producers",
       "Contact AgroLite for bulk availability",
     ],
   },
   {
     slug: "sprouted-oil-palm-seed-packs-500",
-    name: "Sprouted Oil Palm Seed Packs (500 Seeds)",
+    name: "Hybrid Tenera F-1 Seed Packs (500 Seeds)",
     shortDescription:
-      "Pack of 500 Hybrid Tenera sprouted oil palm seeds for large-scale nursery establishment.",
+      "Pack of 500 Hybrid Tenera F-1 sprouted oil palm seeds for large-scale nursery establishment.",
     description:
       "This 500-seed pack of sprouted Hybrid Tenera oil palm seeds is designed for large-scale nursery establishment and commercial plantation development. AgroLite supplies quality germinated seeds to support professional nursery operations and agricultural investment projects across Liberia.",
     category: "Oil Palm Products",
     availability: "Available",
     packageSize: "500 Seeds per Pack",
-    image: IMAGES.realOilPalmSeeds,
-    gallery: [IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery],
+    image: IMAGES.realTeneraSeeds,
+    gallery: [IMAGES.realTeneraSeeds, IMAGES.realOilPalmSeeds, IMAGES.oilPalmNursery],
     benefits: [
       "Economical for large nursery operations",
       "Consistent Hybrid Tenera genetics",
@@ -403,8 +404,8 @@ export const products: Product[] = [
       "AgroLite seed yam tubers provide high-quality propagation stock for commercial yam production. Selected for healthy growth performance and suitability for productive yam farming systems.",
     category: "Root & Tuber Crops",
     availability: "Available",
-    image: IMAGES.yam,
-    gallery: [IMAGES.yam],
+    image: IMAGES.realSeedYams,
+    gallery: [IMAGES.realSeedYams],
     benefits: [
       "Healthy propagation stock",
       "Strong growth performance",
@@ -415,6 +416,30 @@ export const products: Product[] = [
       "Propagation and production use",
       "Commercial farm supply",
       "Contact for seasonal availability",
+    ],
+  },
+  {
+    slug: "fresh-yam-package",
+    name: "Fresh Yam Package (4 Yams)",
+    shortDescription:
+      "Four fresh, farm-quality yams in one value package.",
+    description:
+      "Stock up on fresh yams with AgroLite's yam package: four farm-quality yams for USD 25. Ideal for households, restaurants, and retailers looking for reliable, good-value yams.",
+    category: "Root & Tuber Crops",
+    availability: "Available",
+    price: "USD 25 for 4 yams",
+    image: IMAGES.realYamPackage,
+    imageFit: "contain",
+    gallery: [IMAGES.realYamPackage, IMAGES.realSeedYams],
+    benefits: [
+      "Great value per package",
+      "Fresh, farm-quality yams",
+      "Good for households and food businesses",
+    ],
+    features: [
+      "4 yams per package",
+      "Bulk orders welcome",
+      "Contact for current availability",
     ],
   },
 
@@ -478,8 +503,8 @@ export const products: Product[] = [
       "AgroLite empty sacs support sack-based yam farming systems that maximize space efficiency for small-scale and urban agricultural production. Heavy-duty construction ensures reliable use throughout the growing cycle.",
     category: "Farm Inputs",
     availability: "Available",
-    image: IMAGES.yam,
-    gallery: [IMAGES.yam],
+    image: IMAGES.sacYamFarming,
+    gallery: [IMAGES.sacYamFarming],
     benefits: [
       "Space-efficient farming",
       "Suitable for small-scale and urban production",
@@ -491,6 +516,33 @@ export const products: Product[] = [
       "Smallholder and urban farming",
       "Bulk supply available",
     ],
+  },
+  {
+    slug: "agrolite-organic-fertilizer",
+    name: "AgroLite Organic Fertilizer (25 kg)",
+    shortDescription:
+      "100% organic fertilizer that improves soil health and boosts crop yields.",
+    description:
+      "AgroLite Organic Fertilizer is a 100% organic plant nutrition product that feeds your soil as well as your crops. It improves soil structure and health, supplies essential nutrients, and supports higher yields across cocoa, oil palm, vegetables, maize, and fruit trees, while remaining environmentally friendly.",
+    category: "Farm Inputs",
+    availability: "Available",
+    packageSize: "25 kg bag",
+    image: IMAGES.realOrganicFertilizer,
+    imageFit: "contain",
+    gallery: [IMAGES.realOrganicFertilizer],
+    benefits: [
+      "Improves soil health",
+      "Increases crop yield",
+      "Rich in nutrients",
+      "Environmentally friendly",
+    ],
+    features: [
+      "100% organic",
+      "25 kg net weight",
+      "Suitable for cocoa, oil palm, vegetables, maize, and fruit trees",
+      "Pair with an AgroLite soil test for the right application rate",
+    ],
+    badge: "New",
   },
   {
     slug: "fertilizer",

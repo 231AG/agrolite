@@ -3,7 +3,7 @@ export const COMPANY = {
   tagline: "Growing Beyond Greatness",
   footerTagline: "Growing Beyond Greatness Together",
   founded: 2017,
-  email: "info@agrolite.net",
+  email: "info@agrolite.org",
   phones: ["0777185705", "0880761468", "0770660738", "0777462536"],
   address: {
     line1: "Voga Mission, Right Opposite the Cemetery",
@@ -20,6 +20,7 @@ export const NAV_LINKS = [
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
   { href: "/services", label: "Services" },
+  { href: "/projects", label: "Projects" },
   { href: "/impact", label: "Impact" },
   { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },

@@ -31,6 +31,8 @@ export interface Product {
   badge?: string;
   featured?: boolean;
   packageSize?: string;
+  /** "contain" for designed graphics (flyers, promos) that must not be cropped. */
+  imageFit?: "cover" | "contain";
 }
 
 export interface Service {

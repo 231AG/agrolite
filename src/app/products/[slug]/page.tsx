@@ -131,12 +131,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <FadeIn>
               <div className="space-y-4">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                <div
+                  className={`relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg ${
+                    product.imageFit === "contain" ? "bg-cream" : ""
+                  }`}
+                >
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover"
+                    className={product.imageFit === "contain" ? "object-contain" : "object-cover"}
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>

@@ -145,6 +145,87 @@ export default function ImpactPage() {
         </div>
       </section>
 
+      {/* Featured programme: Sac Yam Farming */}
+      <section id="sac-yam-farming" className="section-padding bg-white scroll-mt-20">
+        <div className="container-wide mx-auto">
+          <FadeIn>
+            <SectionHeader
+              eyebrow="Featured Programme"
+              title="Sac Yam Farming: Sustainable Agriculture & Youth Enterprise"
+            />
+          </FadeIn>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+            <FadeIn>
+              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src={IMAGES.sacYamFarming}
+                  alt="Rows of sacks with young yam vines growing on stakes, part of AgroLite's Sac Yam Farming programme"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <dl className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { term: "Participants from", detail: "Bong, Montserrado & Margibi counties, Liberia, and Imo State, Nigeria" },
+                  { term: "Focus", detail: "Yam cultivation in sacks plus entrepreneurship training" },
+                  { term: "Sponsor", detail: "Good Samaritans of The Church of Jesus Christ of Latter-day Saints" },
+                  { term: "AgroLite's role", detail: "Input sourcing, training, and monitoring through to completion" },
+                ].map((item) => (
+                  <div key={item.term} className="rounded-xl bg-accent-light/40 p-4">
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{item.term}</dt>
+                    <dd className="text-sm text-foreground">{item.detail}</dd>
+                  </div>
+                ))}
+              </dl>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <div className="space-y-4 text-muted leading-relaxed">
+                <p>
+                  Through our Sac Yam Farming initiative, AgroLite Company Inc. advances sustainable
+                  agricultural practices by equipping young people with practical skills to cultivate
+                  yam in sacks and bring their harvests to market. Designed for spaces where land
+                  access or soil conditions can be challenging, bag-based yam production helps youth
+                  turn compact spaces into productive growing areas while applying sound agronomy and
+                  responsible resource use. Beyond cultivation techniques, the program pairs hands-on
+                  farming with an entrepreneurship training program so participants learn how to plan
+                  production, manage inputs, and market their crops effectively.
+                </p>
+                <p>
+                  Participants for the initiative were drawn primarily from Bong, Montserrado, and
+                  Margibi counties, with a smaller group of participants selected in Imo State,
+                  Nigeria. Bringing together young growers across these communities fostered practical
+                  peer learning around shared agricultural challenges and market opportunities. Across
+                  every location, the program focused on building self-reliance and practical business
+                  readiness among emerging young farmers.
+                </p>
+                <p>
+                  This project was sponsored by Good Samaritans of The Church of Jesus Christ of
+                  Latter-day Saints, with direct funding provided through Sister Sandy Farella as
+                  representative of the funders. Their partnership made it possible to reach young
+                  participants across Liberia and Imo State and support them from initial setup
+                  through harvest readiness.
+                </p>
+                <p>
+                  From start to finish, AgroLite led hands-on implementation: sourcing quality planting
+                  materials, delivering structured training, and providing ongoing monitoring through
+                  to the completion of the project. By combining dependable input sourcing, practical
+                  instruction, and consistent follow-through, AgroLite helped ensure participants could
+                  apply sustainable practices and carry their enterprise skills forward after the
+                  program concluded.
+                </p>
+              </div>
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 mt-6 font-semibold text-primary hover:gap-3 transition-all"
+              >
+                See our farm development projects <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Visual Storytelling */}
       <section className="section-padding bg-accent-light/30">
         <div className="container-wide mx-auto">
