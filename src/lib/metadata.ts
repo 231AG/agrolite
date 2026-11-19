@@ -124,6 +124,13 @@ export const PAGE_METADATA = {
     path: "/services/soil-testing",
     image: "/assessments/IMG_20260602_141749_199.jpg",
   },
+  projects: {
+    title: "Farm Projects in Liberia: Oil Palm & Plantain",
+    description:
+      "See AgroLite's farm development projects in Liberia, including the 100-acre Kwekeh oil palm plantation in Bong County and the Garotan plantain and banana farm.",
+    path: "/projects",
+    image: "/projects/kwekeh-farm.jpg",
+  },
   impact: {
     title: "Farmer & Community Impact in Liberia",
     description:

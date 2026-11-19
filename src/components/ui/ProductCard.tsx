@@ -11,12 +11,12 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <article className="group bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className={`relative aspect-[4/3] overflow-hidden ${product.imageFit === "contain" ? "bg-cream" : ""}`}>
         <Image
           src={product.image}
           alt={product.name}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className={`${product.imageFit === "contain" ? "object-contain" : "object-cover"} group-hover:scale-105 transition-transform duration-500`}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {product.badge && (
